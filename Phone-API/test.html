@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto mt-2 text-sky-700">
+      <h1 class="text-6xl">Test Phone</h1>
+    </header>
+    <main class="container mx-auto mt-4">
+      <section class="bg-gray-100 p-4 mt-4">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search...."
+          class="input input-bordered input-secondary w-full max-w-xs"
+        />
+        <button
+          onclick="handleSearch ()"
+          class="btn btn-outline ml-1 px-3 btn-info"
+        >
+          Search
+        </button>
+        <!-- another search button  -->
+        <input
+          id="search-field2"
+          type="text"
+          placeholder="Search here"
+          class="input input-bordered ml-1 input-accent w-full max-w-xs"
+        />
+        <button
+          onclick="searchField2()"
+          class="btn btn-outline ml-1 btn-accent"
+        >
+          Search
+        </button>
+      </section>
+      <!-- search result -->
+      <section class="mt-5">
+        <div id="loading-spinner" class="text-center my-40 hidden">
+          <span class="loading loading-spinner text-secondary"></span>
+        </div>
+        <div
+          id="phones-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20"
+        ></div>
+        <div id="more-container" class="text-center mt-1 hidden">
+          <button class="btn btn-outline btn-info">More</button>
+        </div>
+      </section>
+    </main>
+    <script src="js/test.js"></script>
+  </body>
+</html>
